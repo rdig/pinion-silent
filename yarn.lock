@@ -4148,10 +4148,10 @@ humble-localstorage@^1.4.2:
     has-localstorage "^1.0.1"
     localstorage-memory "^1.0.1"
 
-husky@2.4.1:
-  version "2.4.1"
-  resolved "https://registry.yarnpkg.com/husky/-/husky-2.4.1.tgz#dd00f9646f8693b93f7b3a12ba4be00be0eff7ab"
-  integrity sha512-ZRwMWHr7QruR22dQ5l3rEGXQ7rAQYsJYqaeCd+NyOsIFczAtqaApZQP3P4HwLZjCtFbm3SUNYoKuoBXX3AYYfw==
+husky@2.7.0:
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/husky/-/husky-2.7.0.tgz#c0a9a6a3b51146224e11bba0b46bba546e461d05"
+  integrity sha512-LIi8zzT6PyFpcYKdvWRCn/8X+6SuG2TgYYMrM6ckEYhlp44UcEduVymZGIZNLiwOUjrEud+78w/AsAiqJA/kRg==
   dependencies:
     cosmiconfig "^5.2.0"
     execa "^1.0.0"
@@ -4460,9 +4460,10 @@ ipfs-http-client@^32.0.0:
     tar-stream "^2.0.1"
     through2 "^3.0.1"
 
-"ipfs-http-client@github:ipfs/js-ipfs-http-client#master":
-  version "32.0.1"
-  resolved "https://codeload.github.com/ipfs/js-ipfs-http-client/tar.gz/fdbfb39c077fa9bfe1ea9ad2847a20bc77d4d4ec"
+ipfs-http-client@ipfs/js-ipfs-http-client#master:
+  version "33.1.0"
+  uid "42626d8e6101f6b3e0abf02675fb5352327ef1ae"
+  resolved "https://codeload.github.com/ipfs/js-ipfs-http-client/tar.gz/42626d8e6101f6b3e0abf02675fb5352327ef1ae"
   dependencies:
     async "^2.6.1"
     bignumber.js "^9.0.0"
@@ -4481,6 +4482,7 @@ ipfs-http-client@^32.0.0:
     ipfs-utils "~0.0.3"
     ipld-dag-cbor "~0.15.0"
     ipld-dag-pb "~0.17.3"
+    ipld-raw "^4.0.0"
     is-ipfs "~0.6.1"
     is-pull-stream "0.0.0"
     is-stream "^2.0.0"
