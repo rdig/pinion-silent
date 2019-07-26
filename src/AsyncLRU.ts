@@ -117,6 +117,7 @@ class AsyncLRU<K, V> {
        * We could also throw here and bubble up to remove to let the outer
        * application decide what to do.
        */
+      return;
     }
   }
 
