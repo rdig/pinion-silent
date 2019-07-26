@@ -5,7 +5,6 @@
  */
 
 import assert = require('assert');
-import debug = require('debug');
 import EventEmitter = require('events');
 import { Entry } from 'ipfs-log';
 
@@ -16,8 +15,6 @@ import { ClientActions, PinnerActions } from './actions';
 import StoreManager from './StoreManager';
 import IPFSNode from './IPFSNode';
 
-const logError = debug('pinner:error');
-const logDebug = debug('pinner:debug');
 const { REPLICATE, PIN_HASH, ANNOUNCE_CLIENT } = ClientActions;
 const { HAVE_HEADS, ANNOUNCE_PINNER } = PinnerActions;
 
@@ -95,9 +92,7 @@ class Pinion {
     let action: ClientAction | undefined;
     try {
       action = JSON.parse(message.data.toString());
-    } catch (e) {
-      logError(`Could not parse pinner message: ${message.data}`);
-    }
+    } catch (e) {}
 
     if (!action) return;
     const { type, payload } = action;
@@ -106,29 +101,23 @@ class Pinion {
       case ANNOUNCE_CLIENT: {
         try {
           await this.announce();
-        } catch (caughtError) {
-          logError(caughtError);
-        }
+        } catch (caughtError) {}
       }
       case PIN_HASH: {
         if (!ipfsHash) {
-          logError('PIN_HASH: no ipfsHash given');
           return;
         }
-        this.ipfsNode.pinHash(ipfsHash).catch(logError);
+        this.ipfsNode.pinHash(ipfsHash).catch();
         break;
       }
       case REPLICATE: {
         if (!address) {
-          logError('REPLICATE: no address given');
           return;
         }
         try {
           const heads = await this.storeManager.loadStore(address);
           await this.publishHeads(address, heads);
-        } catch (caughtError) {
-          logError(caughtError);
-        }
+        } catch (caughtError) {}
         break;
       }
       default:
@@ -137,7 +126,7 @@ class Pinion {
   };
 
   private handleNewPeer = (): void => {
-    this.announce().catch(logError);
+    this.announce().catch();
   };
 
   private async announce(): Promise<void> {
@@ -166,7 +155,6 @@ class Pinion {
 
   public async start(): Promise<void> {
     await this.ipfsNode.start();
-    logDebug(`Pinner id: ${this.ipfsNode.id}`);
     await this.storeManager.start();
     await this.announce(); // Announce on start because the room may have peers already
   }
@@ -176,7 +164,6 @@ class Pinion {
   }
 
   public async close(): Promise<void> {
-    logDebug('Closing...');
     await this.storeManager.stop();
     await this.ipfsNode.stop();
     this.events.removeAllListeners();
