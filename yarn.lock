@@ -681,7 +681,12 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.12.18.tgz#1d3ca764718915584fcd9f6344621b7672665c67"
   integrity sha512-fh+pAqt4xRzPfqA6eh3Z2y6fyZavRIumvjhaCL753+TVkGKGhpPeyrJG2JftD0T9q4GF00KjefsQ+PQNDdWQaQ==
 
-"@types/node@10.14.9", "@types/node@^10.3.2":
+"@types/node@10.14.13":
+  version "10.14.13"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.14.13.tgz#ac786d623860adf39a3f51d629480aacd6a6eec7"
+  integrity sha512-yN/FNNW1UYsRR1wwAoyOwqvDuLDtVXnaJTZ898XIw/Q5cCaeVAlVwvsmXLX5PuiScBYwZsZU4JYSHB3TvfdwvQ==
+
+"@types/node@^10.3.2":
   version "10.14.9"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.14.9.tgz#2e8d678039d27943ce53a1913386133227fd9066"
   integrity sha512-NelG/dSahlXYtSoVPErrp06tYFrvzj8XLWmKA+X8x0W//4MqbUyZu++giUG/v0bjAT6/Qxa8IjodrfdACyb0Fg==
@@ -4460,9 +4465,10 @@ ipfs-http-client@^32.0.0:
     tar-stream "^2.0.1"
     through2 "^3.0.1"
 
-"ipfs-http-client@github:ipfs/js-ipfs-http-client#master":
-  version "32.0.1"
-  resolved "https://codeload.github.com/ipfs/js-ipfs-http-client/tar.gz/fdbfb39c077fa9bfe1ea9ad2847a20bc77d4d4ec"
+ipfs-http-client@ipfs/js-ipfs-http-client#master:
+  version "33.1.0"
+  uid "42626d8e6101f6b3e0abf02675fb5352327ef1ae"
+  resolved "https://codeload.github.com/ipfs/js-ipfs-http-client/tar.gz/42626d8e6101f6b3e0abf02675fb5352327ef1ae"
   dependencies:
     async "^2.6.1"
     bignumber.js "^9.0.0"
@@ -4481,6 +4487,7 @@ ipfs-http-client@^32.0.0:
     ipfs-utils "~0.0.3"
     ipld-dag-cbor "~0.15.0"
     ipld-dag-pb "~0.17.3"
+    ipld-raw "^4.0.0"
     is-ipfs "~0.6.1"
     is-pull-stream "0.0.0"
     is-stream "^2.0.0"
