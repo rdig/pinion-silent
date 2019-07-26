@@ -4460,9 +4460,10 @@ ipfs-http-client@^32.0.0:
     tar-stream "^2.0.1"
     through2 "^3.0.1"
 
-"ipfs-http-client@github:ipfs/js-ipfs-http-client#master":
-  version "32.0.1"
-  resolved "https://codeload.github.com/ipfs/js-ipfs-http-client/tar.gz/fdbfb39c077fa9bfe1ea9ad2847a20bc77d4d4ec"
+ipfs-http-client@ipfs/js-ipfs-http-client#master:
+  version "33.1.0"
+  uid "42626d8e6101f6b3e0abf02675fb5352327ef1ae"
+  resolved "https://codeload.github.com/ipfs/js-ipfs-http-client/tar.gz/42626d8e6101f6b3e0abf02675fb5352327ef1ae"
   dependencies:
     async "^2.6.1"
     bignumber.js "^9.0.0"
@@ -4481,6 +4482,7 @@ ipfs-http-client@^32.0.0:
     ipfs-utils "~0.0.3"
     ipld-dag-cbor "~0.15.0"
     ipld-dag-pb "~0.17.3"
+    ipld-raw "^4.0.0"
     is-ipfs "~0.6.1"
     is-pull-stream "0.0.0"
     is-stream "^2.0.0"
@@ -9995,10 +9997,10 @@ typeforce@^1.11.3, typeforce@^1.11.5:
   resolved "https://registry.yarnpkg.com/typeforce/-/typeforce-1.18.0.tgz#d7416a2c5845e085034d70fcc5b6cc4a90edbfdc"
   integrity sha512-7uc1O8h1M1g0rArakJdf0uLRSSgFcYexrVoKo+bzJd32gd4gDy2L/Z+8/FjPnU9ydY3pEnVPtr9FyscYY60K1g==
 
-typescript@3.5.2:
-  version "3.5.2"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.5.2.tgz#a09e1dc69bc9551cadf17dba10ee42cf55e5d56c"
-  integrity sha512-7KxJovlYhTX5RaRbUdkAXN1KUZ8PwWlTzQdHV6xNqvuFOs7+WBo10TQUqT19Q/Jz2hk5v9TQDIhyLhhJY4p5AA==
+typescript@3.5.3:
+  version "3.5.3"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.5.3.tgz#c830f657f93f1ea846819e929092f5fe5983e977"
+  integrity sha512-ACzBtm/PhXBDId6a6sDJfroT2pOWt/oOnk4/dElG5G33ZL776N3Y6/6bKZJBFpd+b05F3Ct9qDjMeJmRWtE2/g==
 
 typical@^5.0.0:
   version "5.0.0"
