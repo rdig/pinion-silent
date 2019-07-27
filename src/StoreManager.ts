@@ -9,7 +9,6 @@
 
 import OrbitDBStore from 'orbit-db-store';
 
-import debug = require('debug');
 import OrbitDB = require('orbit-db');
 import EventEmitter = require('events');
 
@@ -17,8 +16,6 @@ import AccessControllers from './AccessControllers';
 import PermissiveAccessController from './PermissiveAccessController';
 import IPFSNode from './IPFSNode';
 import AsyncLRU from './AsyncLRU';
-
-const log = debug('pinner:storeManager');
 
 type StoreType = 'counter' | 'eventlog' | 'feed' | 'docstore' | 'keyvalue';
 
@@ -62,14 +59,12 @@ class StoreManager {
     store: OrbitDBStore | void,
   ): Promise<void> => {
     if (!store) {
-      return log(new Error(`Could not close store: ${address}`));
+      return;
     }
     return store.close();
   };
 
   private load = async (address: string): Promise<OrbitDBStore> => {
-    log(`Opening store with address ${address}`);
-    log(`Open stores: ${this.openStores}`);
     // I think this is done anyways by orbit, but just in case
     const pinHeadHash = (storeAddress: string, ipfsHash: string): void => {
       this.ipfsNode.pinHash(ipfsHash);
