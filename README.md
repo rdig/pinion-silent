@@ -109,10 +109,6 @@ You can specify the an IPFS repo path of your preference. The default is `./ipfs
 
 You can specify the orbit-db path option so stores data are kept in the place of your preference. The default is `./orbitdb`
 
-### Debug
-
-Pinion is still on its infancy and you might need debug info or a more detailed output to figure out if it misbehaves. To run it on verbose/debug mode, please also set an environment var like so `DEBUG='pinner:*'`.
-
 ## API
 
 ### Requests
