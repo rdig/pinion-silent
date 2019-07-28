@@ -1,7 +1,7 @@
 {
-  "name": "@colony/pinion",
-  "version": "0.5.0",
-  "description": "Colony orbit-db pinning service",
+  "name": "pinion-silent",
+  "version": "0.5.2",
+  "description": "A rough fork of pinion that removes the overhead of outputting debug data or message logging",
   "bin": {
     "pinion": "bin/index.js"
   },
