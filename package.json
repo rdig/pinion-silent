@@ -29,7 +29,6 @@
   "author": "Christian Maniewski <chris@colony.io>",
   "license": "MIT",
   "devDependencies": {
-    "@types/debug": "4.1.4",
     "@types/dotenv": "6.1.1",
     "@types/lru-cache": "5.1.0",
     "@types/node": "10.14.9",
