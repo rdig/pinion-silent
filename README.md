@@ -18,7 +18,9 @@
   </a>
 </div>
 
-# Pinion
+# Silent Pinion
+
+_**NOTE**: This is a fork of the main Pinion, which removes all logging and debug output from the library, in order to reduce the memory overhead consumed by stringifying all those messages._
 
 Pinion is a lightweight pinning service that supports both IPFS content and [orbit-db](https://github.com/orbitdb/orbit-db) stores. It relies solely on [ipfs-pubsub-peer-monitor](https://github.com/ipfs-shipyard/ipfs-pubsub-peer-monitor), [orbit-db](https://github.com/orbitdb/orbit-db), and [js-ipfs-http-client](https://github.com/ipfs/js-ipfs-http-client) to communicate with an IPFS node.
 
