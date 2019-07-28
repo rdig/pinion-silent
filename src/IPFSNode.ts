@@ -72,7 +72,6 @@ class IPFSNode {
   };
 
   private handleNewPeer = (peer: string): void => {
-    const peers = this.roomMonitor['_peers'];
     this.events.emit('pubsub:newpeer', peer);
   };
 
@@ -122,9 +121,7 @@ class IPFSNode {
     }
     try {
       await this.ipfs.pin.add(ipfsHash);
-    } catch (caughtError) {
-      return;
-    }
+    } catch (caughtError) {}
     this.events.emit('ipfs:pinned', ipfsHash);
   }
 }
